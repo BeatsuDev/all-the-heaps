@@ -1,7 +1,11 @@
 {
   "name": "all-the-heaps",
+  "version": "0.1.0",
   "module": "src/index.ts",
+  "author": "Eric Bieszczad-Stie <ericbieszczad@gmail.com> (https://ericbs.com)",
+  "license": "UNLICENSED",
   "type": "module",
+  "keywords": ["heap", "binary heap", "min heap", "max heap"],
   "devDependencies": {
     "@types/bun": "latest"
   },
