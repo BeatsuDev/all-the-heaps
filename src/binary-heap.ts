@@ -27,8 +27,8 @@ export class BinaryHeap<T = number> implements Heap<T> {
      * @param array An array of items to create a binary heap from.
      * @returns a binary heap from the given items in the array.
      */
-    static from<T>(array: Array<T>): BinaryHeap<T> {
-        const heap = new BinaryHeap<T>();
+    static from<T>(array: Array<T>, comparator?: (a: T, b: T) => number): BinaryHeap<T> {
+        const heap = comparator ? new BinaryHeap<T>(comparator) : new BinaryHeap<T>();
         heap.array = array;
         for (let i = Math.floor(array.length / 2) - 1; i >= 0; i--) {
             heap.siftDown(i);
