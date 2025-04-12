@@ -17,3 +17,14 @@
  */
 export type Comparator<T> = (item1: T, item2: T) => number;
 
+/**
+ * An interface describing the required methods for making use of any heap structure.
+ *
+ * Some heap implementations may include more methods such as pushpop (faster than
+ * each done individually).
+ */
+export interface Heap<T> {
+    pop(): T;
+    push(item: T): void;
+    peek(): T;
+}
