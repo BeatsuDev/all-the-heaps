@@ -21,5 +21,8 @@
   "repository": {
     "type": "git",
     "url": "git@github.com:BeatsuDev/all-the-heaps.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BeatsuDev/all-the-heaps/issues"
   }
 }
