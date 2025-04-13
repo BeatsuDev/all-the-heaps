@@ -5,7 +5,7 @@
   "module": "dist/index.js",
   "types": "dist/types/index.d.ts",
   "scripts": {
-    "build": "bun build src/index.ts --outdir dist && tsc --emitDeclarationOnly --declaration src/index.ts --outdir dist/types"
+    "build": "bun build src/index.ts --outdir dist && tsc -p tsconfig.build.json"
   },
   "devDependencies": {
     "@types/bun": "latest"
