@@ -24,6 +24,7 @@ export type Comparator<T> = (item1: T, item2: T) => number;
  * each done individually).
  */
 export interface Heap<T> {
+    array: T[];
     pop(): T | undefined;
     push(item: T): void;
     peek(): T | undefined;
