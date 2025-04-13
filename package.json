@@ -1,15 +1,19 @@
 {
   "name": "all-the-heaps",
   "version": "0.1.0",
-  "module": "src/index.ts",
   "author": "Eric Bieszczad-Stie <ericbieszczad@gmail.com> (https://ericbs.com)",
-  "license": "UNLICENSED",
-  "type": "module",
-  "keywords": ["heap", "binary heap", "min heap", "max heap"],
+  "module": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "build": "bun build src/index.ts --outdir dist && tsc --emitDeclarationOnly --declaration src/index.ts --outdir dist/types"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
-  }
+  },
+  "keywords": ["heap", "binary heap", "min heap", "max heap"],
+  "license": "Unlicense",
+  "type": "module"
 }
