@@ -2,11 +2,12 @@
   "name": "all-the-heaps",
   "version": "0.1.0",
   "author": "Eric Bieszczad-Stie <ericbieszczad@gmail.com> (https://ericbs.com)",
-  "module": "dist/index.js",
-  "types": "dist/types/index.d.ts",
+  "exports": "./dist/index.js",
+  "files": ["./dist/*"],
+  "types": "./dist/types/index.d.ts",
   "scripts": {
     "build": "bun build src/index.ts --outdir dist && tsc -p tsconfig.build.json",
-    "publish": "bun run build && bun publish dist"
+    "publish": "bun run build && bun publish"
   },
   "devDependencies": {
     "@types/bun": "latest"
