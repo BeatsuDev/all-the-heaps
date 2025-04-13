@@ -50,8 +50,6 @@ export class BinaryHeap<T = number> implements Heap<T> {
      * const correct1 = new BinaryHeap();  // This is fine
      * const wrong = new BinaryHeap<string>();  // Will result in a runtime error
      * const correct2 = new BinaryHeap<string>((a, b) => a.length - b.length);  // This is also fine
-     *
-     * @example
      */
     constructor(comparator: Comparator<T> = ((a: number, b: number) => a - b) as Comparator<T>) {
         // The type cast in the constructor argument default value above "loses" information.
