@@ -4,14 +4,16 @@ import type { Comparator, Heap } from "./common";
  * A complete binary tree implementation of a heap.
  *
  * The binary heap stores the data in an underlying array and is a min-heap by default, meaning the
- * top-most node is the smallest. Make it a max-heap by passing the comparator: (a, b) => b - a; to
+ * top-most node is the smallest. Make it a max-heap by passing the comparator: `(a, b) => b - a`; to
  * the constructor. The comparator should return a negative number when any node compared to a
  * descendant of it is in correct order.
  *
- * Take the following max heap ((a, b) => b - a) as an example:
+ * Take the following max heap (`(a, b) => b - a`) as an example:
+ * ```
  *       5
  *      / \
  *     2   3
+ * ```
  * We know logically that this heap is a correct max heap by looking at it. Using the comparator
  * function we can programmatically check that it's correct by asserting that every parent compared
  * to their children (note that the order here matters: PARENT compared to CHILDREN) return a negative
