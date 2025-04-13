@@ -5,7 +5,8 @@
   "module": "dist/index.js",
   "types": "dist/types/index.d.ts",
   "scripts": {
-    "build": "bun build src/index.ts --outdir dist && tsc -p tsconfig.build.json"
+    "build": "bun build src/index.ts --outdir dist && tsc -p tsconfig.build.json",
+    "publish": "bun run build && bun publish dist"
   },
   "devDependencies": {
     "@types/bun": "latest"
