@@ -17,5 +17,9 @@
   },
   "keywords": ["heap", "binary heap", "min heap", "max heap"],
   "license": "Unlicense",
-  "type": "module"
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:BeatsuDev/all-the-heaps.git"
+  }
 }
