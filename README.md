@@ -52,7 +52,7 @@ heap.pop() // undefined
 
 ## Roadmap
 - [x] Binary heap
-- [ ] D-ary heap
+- [x] D-ary heap
 - [ ] Skew heap
 - [ ] Binomial heap
 - [ ] Pairing heap
