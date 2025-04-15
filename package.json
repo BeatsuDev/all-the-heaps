@@ -24,5 +24,11 @@
   },
   "bugs": {
     "url": "https://github.com/BeatsuDev/all-the-heaps/issues"
+  },
+  "optionalDependencies": {
+    "@types/heap": "^0.2.34",
+    "heap": "^0.2.7",
+    "heap-js": "^2.6.0",
+    "mitata": "^1.0.34"
   }
 }
