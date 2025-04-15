@@ -2,33 +2,30 @@
   "name": "all-the-heaps",
   "version": "0.2.2",
   "author": "Eric Bieszczad-Stie <ericbieszczad@gmail.com> (https://ericbs.com)",
-  "exports": "./dist/index.js",
-  "files": ["./dist/*"],
-  "types": "./dist/types/index.d.ts",
-  "scripts": {
-    "build": "bun build src/index.ts --outdir dist && tsc -p tsconfig.build.json",
-    "publish": "bun run build && bun publish"
-  },
-  "devDependencies": {
-    "@types/bun": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
-  },
-  "keywords": ["heap", "binary heap", "min heap", "max heap"],
-  "license": "Unlicense",
-  "type": "module",
   "repository": {
     "type": "git",
     "url": "git@github.com:BeatsuDev/all-the-heaps.git"
   },
-  "bugs": {
-    "url": "https://github.com/BeatsuDev/all-the-heaps/issues"
-  },
-  "optionalDependencies": {
+  "devDependencies": {
+    "@types/bun": "latest",
     "@types/heap": "^0.2.34",
     "heap": "^0.2.7",
     "heap-js": "^2.6.0",
     "mitata": "^1.0.34"
-  }
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "exports": "./dist/index.js",
+  "bugs": {
+    "url": "https://github.com/BeatsuDev/all-the-heaps/issues"
+  },
+  "files": ["./dist/*"],
+  "keywords": ["heap", "binary heap", "min heap", "max heap"],
+  "license": "Unlicense",
+  "scripts": {
+    "build": "bun build src/index.ts --outdir dist && tsc -p tsconfig.build.json"
+  },
+  "type": "module",
+  "types": "./dist/types/index.d.ts"
 }
