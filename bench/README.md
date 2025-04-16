@@ -9,7 +9,7 @@ This directory contains benchmarks comparing all-the-heaps implementations with 
 > Note: Ensure you have installed all dependencies to run the benchmarks.
 
 ```
-bun bench/<benchmark>.ts
+bun --expose-gc --allow-natives-syntax bench/<benchmark>.ts
 ```
 
 ## Results
