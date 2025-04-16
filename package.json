@@ -1,12 +1,13 @@
 {
   "name": "all-the-heaps",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "author": "Eric Bieszczad-Stie <ericbieszczad@gmail.com> (https://ericbs.com)",
   "repository": {
     "type": "git",
     "url": "git@github.com:BeatsuDev/all-the-heaps.git"
   },
   "devDependencies": {
+    "@mitata/counters": "^0.0.8",
     "@types/bun": "latest",
     "@types/heap": "^0.2.34",
     "heap": "^0.2.7",

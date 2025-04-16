@@ -4,6 +4,7 @@
     "": {
       "name": "all-the-heaps",
       "devDependencies": {
+        "@mitata/counters": "^0.0.8",
         "@types/bun": "latest",
         "@types/heap": "^0.2.34",
         "heap": "^0.2.7",
@@ -16,6 +17,8 @@
     },
   },
   "packages": {
+    "@mitata/counters": ["@mitata/counters@0.0.8", "", {}, "sha512-f11w0Y1ETFlarDP7CePj8Z+y8Gv5Ax4gMxWsEwrqh0kH/YIY030Ezx5SUJeQg0YPTZ2OHKGcLG1oGJbIqHzaJA=="],
+
     "@types/bun": ["@types/bun@1.2.9", "", { "dependencies": { "bun-types": "1.2.9" } }, "sha512-epShhLGQYc4Bv/aceHbmBhOz1XgUnuTZgcxjxk+WXwNyDXavv5QHD1QEFV0FwbTSQtNq6g4ZcV6y0vZakTjswg=="],
 
     "@types/heap": ["@types/heap@0.2.34", "", {}, "sha512-x9gp0NZnQeFrgrb6O3Tq5KtvsuEhWbc2vlHfs4cDOKcHsanzI39lIGcPdND/MRyaKUbxNgKXfKGCQGnjjOWweQ=="],
