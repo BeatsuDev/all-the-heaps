@@ -86,7 +86,7 @@ export class DAryHeap<T = number> implements Heap<T> {
             const childIndexes = Array.from(Array(this.n).keys())
                 .map(n => firstChildIndex + n);
             const smallestChildIndex = childIndexes
-                .filter(x => this.array[x])
+                .filter(x => x < this.array.length)
                 .reduce((a, b) => (this.#compare(a, b) < 0 ? a : b));
             if (this.#compare(index, smallestChildIndex) < 0) return;
 
