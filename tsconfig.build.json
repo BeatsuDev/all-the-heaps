@@ -1,5 +1,5 @@
 {
-  "exclude": ["tests/*"],
+  "exclude": ["tests/*", "bench/*"],
   "compilerOptions": {
     // Enable latest features
     "lib": ["ESNext"],
