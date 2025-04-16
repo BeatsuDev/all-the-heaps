@@ -33,16 +33,16 @@ runtime: bun 1.2.9 (x64-linux)
 Best case in this sense is heapifying an array of ascending numbers (no swaps required).
 Worst case is heapifying an array of descending numbers (max swaps required).
 
-**Best case**
-`heap@0.2.7`: 19.68ms / iteration
-`heap-js@2.6.0`: 19.59ms / iteration
+**Best case**\
+`heap@0.2.7`: 19.68ms / iteration\
+`heap-js@2.6.0`: 19.59ms / iteration\
 `all-the-heaps@0.2.3`: 19.51ms / iteration
 
 ![Mitata results for best case heapify.](./assets/heapify-bestcase-comparison.png)
 
-**Worst case**
-`heap@0.2.7`: 18.33ms / iteration
-`heap-js@2.6.0`: 5.85ms / iteration
+**Worst case**\
+`heap@0.2.7`: 18.33ms / iteration\
+`heap-js@2.6.0`: 5.85ms / iteration\
 `all-the-heaps@0.2.3`: 4.04ms / iteration
 
 ![Mitata results for best case heapify.](./assets/heapify-worstcase-comparison.png)
@@ -59,16 +59,16 @@ runtime: bun 1.2.9 (x64-linux)
 Best case: pushing numbers in ascending order
 Worst case: pushing numbers in descending order
 
-**Best case**
-`heap@0.2.7`: 954.77µs / iteration
-`heap-js@2.6.0`: 2.01ms / iteration
+**Best case**\
+`heap@0.2.7`: 954.77µs / iteration\
+`heap-js@2.6.0`: 2.01ms / iteration\
 `all-the-heaps@0.2.3`: 1.06ms / iteration
 
 ![Mitata results for best case pushing 1 million items.](./assets/push-bestcase-comparison.png)
 
-**Worst case**
-`heap@0.2.7`: 2.20ms / iteration
-`heap-js@2.6.0`: 99.13ms / iteration
+**Worst case**\
+`heap@0.2.7`: 2.20ms / iteration\
+`heap-js@2.6.0`: 99.13ms / iteration\
 `all-the-heaps@0.2.3`: 31.64ms / iteration
 
 ![Mitata results for worst case pushing 1 million items.](./assets/push-worstcase-comparison.png)
@@ -82,8 +82,8 @@ cpu: AMD Ryzen 7 5700U with Radeon Graphics
 runtime: bun 1.2.9 (x64-linux)
 ```
 
-`heap@0.2.7`: 595.19µs / iteration
-`heap-js@2.6.0`: 1.47ms / iteration
+`heap@0.2.7`: 595.19µs / iteration\
+`heap-js@2.6.0`: 1.47ms / iteration\
 `all-the-heaps@0.2.3`: 299.21µs / iteration
 
 ![Mitata results for popping 1 million items.](./assets/pop-comparison.png)
@@ -100,16 +100,16 @@ runtime: bun 1.2.9 (x64-linux)
 Best case: pushing numbers in ascending order
 Worst case: pushing numbers in descending order
 
-**Best case**
-`heap@0.2.7`: 8.29ms / iteration
-`heap-js@2.6.0`: 95.15ms / iteration
+**Best case**\
+`heap@0.2.7`: 8.29ms / iteration\
+`heap-js@2.6.0`: 95.15ms / iteration\
 `all-the-heaps@0.2.3`: 24.58ms / iteration
 
 ![Mitata results for best case push & pop 100 thousand elements.](./assets/pushpop-bestcase-comparison.png)
 
-**Worst case**
-`heap@0.2.7`: 8.21ms / iteration
-`heap-js@2.6.0`: 181.94ms / iteration
+**Worst case**\
+`heap@0.2.7`: 8.21ms / iteration\
+`heap-js@2.6.0`: 181.94ms / iteration\
 `all-the-heaps@0.2.3`: 45.61ms / iteration
 
 ![Mitata results for best case push & pop 100 thousand elements.](./assets/pushpop-worstcase-comparison.png)
