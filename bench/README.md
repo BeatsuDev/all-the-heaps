@@ -6,7 +6,7 @@ This directory contains benchmarks comparing all-the-heaps implementations with 
 
 ## Run the benchmarks
 
-> Note: Ensure you have installed all the *optional* dependencies to run the benchmarks.
+> Note: Ensure you have installed all dependencies to run the benchmarks.
 
 ```
 bun bench/<benchmark>.ts
