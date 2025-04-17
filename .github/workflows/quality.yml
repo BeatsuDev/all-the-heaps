@@ -29,5 +29,5 @@ jobs:
       - uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-          slug: ${{ github.event.repository.name }}
+          slug: BeatsuDev/all-the-heaps
           files: ./coverage/lcov.info
