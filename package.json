@@ -29,6 +29,7 @@
   "scripts": {
     "build": "rimraf dist && bun build src/index.ts --outdir dist && tsc -p tsconfig.build.json",
     "format": "prettier src bench tests --write",
+    "format:check": "prettier src bench tests",
     "type-check": "tsc --noEmit -p tsconfig.build.json"
   },
   "type": "module",
