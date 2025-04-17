@@ -70,13 +70,6 @@ export class DAryHeap<T = number> implements Heap<T> {
         return this.comparator(this.array[index1], this.array[index2]);
     }
 
-    logChildren(index: number) {
-        const children = Array.from(Array(this.n).keys())
-            .map(x => x + 1)
-            .map(x => DAryHeap.getNthChildIndex(x, this.n, index))
-        console.log(children);
-    }
-
     siftDown(index: number): void {
         // Assumes valid index
         while (true) {
