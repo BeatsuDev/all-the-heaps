@@ -1,5 +1,7 @@
 # All the heaps!
 
+[![codecov](https://codecov.io/github/BeatsuDev/all-the-heaps/graph/badge.svg?token=V7GPRHZHVI)](https://codecov.io/github/BeatsuDev/all-the-heaps)
+
 All the heaps exports several different heap implementations so that you can
 "plug in" any implementation you want while using the same interface. Some heaps
 might be faster in some cases, so instead of rewriting your code to check every
