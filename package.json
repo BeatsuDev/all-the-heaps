@@ -12,7 +12,8 @@
     "@types/heap": "^0.2.34",
     "heap": "^0.2.7",
     "heap-js": "^2.6.0",
-    "mitata": "^1.0.34"
+    "mitata": "^1.0.34",
+    "rimraf": "^6.0.1"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
@@ -25,7 +26,7 @@
   "keywords": ["heap", "binary heap", "min heap", "max heap"],
   "license": "Unlicense",
   "scripts": {
-    "build": "bun build src/index.ts --outdir dist && tsc -p tsconfig.build.json"
+    "build": "rimraf dist && bun build src/index.ts --outdir dist && tsc -p tsconfig.build.json"
   },
   "type": "module",
   "types": "./dist/types/index.d.ts"
