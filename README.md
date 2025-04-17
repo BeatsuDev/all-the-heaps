@@ -1,5 +1,6 @@
 # All the heaps!
 
+![typescript badge](https://badgen.net/static/Typescript/strict%20%F0%9F%92%AA)
 [![codecov](https://codecov.io/github/BeatsuDev/all-the-heaps/graph/badge.svg?token=V7GPRHZHVI)](https://codecov.io/github/BeatsuDev/all-the-heaps)
 
 All the heaps exports several different heap implementations so that you can
