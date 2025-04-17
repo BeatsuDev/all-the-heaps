@@ -13,6 +13,7 @@
     "heap": "^0.2.7",
     "heap-js": "^2.6.0",
     "mitata": "^1.0.34",
+    "prettier": "^3.5.3",
     "rimraf": "^6.0.1"
   },
   "peerDependencies": {
@@ -26,7 +27,8 @@
   "keywords": ["heap", "binary heap", "min heap", "max heap"],
   "license": "Unlicense",
   "scripts": {
-    "build": "rimraf dist && bun build src/index.ts --outdir dist && tsc -p tsconfig.build.json"
+    "build": "rimraf dist && bun build src/index.ts --outdir dist && tsc -p tsconfig.build.json",
+    "format": "prettier src bench tests --write"
   },
   "type": "module",
   "types": "./dist/types/index.d.ts"
