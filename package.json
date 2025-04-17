@@ -28,7 +28,8 @@
   "license": "Unlicense",
   "scripts": {
     "build": "rimraf dist && bun build src/index.ts --outdir dist && tsc -p tsconfig.build.json",
-    "format": "prettier src bench tests --write"
+    "format": "prettier src bench tests --write",
+    "type-check": "tsc --noEmit -p tsconfig.build.json"
   },
   "type": "module",
   "types": "./dist/types/index.d.ts"
