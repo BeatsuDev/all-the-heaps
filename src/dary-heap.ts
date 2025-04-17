@@ -18,8 +18,14 @@ export class DAryHeap<T = number> implements Heap<T> {
      * @param array An array of items to create the heap from.
      * @returns an n-ary heap from the given items in the array.
      */
-    static from<T>(array: Array<T>, n: number, comparator?: (a: T, b: T) => number): DAryHeap<T> {
-        const heap = comparator ? new DAryHeap<T>(n, comparator) : new DAryHeap<T>(n);
+    static from<T>(
+        array: Array<T>,
+        n: number,
+        comparator?: (a: T, b: T) => number
+    ): DAryHeap<T> {
+        const heap = comparator
+            ? new DAryHeap<T>(n, comparator)
+            : new DAryHeap<T>(n);
         heap.array = array;
         for (let i = Math.floor(array.length / n) - 1; i >= 0; i--) {
             heap.siftDown(i);
@@ -42,7 +48,11 @@ export class DAryHeap<T = number> implements Heap<T> {
      *
      * @example
      */
-    constructor(n: number, comparator: Comparator<T> = ((a: number, b: number) => a - b) as Comparator<T>) {
+    constructor(
+        n: number,
+        comparator: Comparator<T> = ((a: number, b: number) =>
+            a - b) as Comparator<T>
+    ) {
         // The type cast in the constructor argument default value above "loses" information.
         // The generic type T can still be explicitly set without a comparator given, resulting in
         // a potentially non-functional comparator. The alternative would be to create a seperate
@@ -62,7 +72,10 @@ export class DAryHeap<T = number> implements Heap<T> {
 
     #swap(index1: number, index2: number): void {
         // Assumes valid indexes
-        [this.array[index1], this.array[index2]] = [this.array[index2], this.array[index1]];
+        [this.array[index1], this.array[index2]] = [
+            this.array[index2],
+            this.array[index1],
+        ];
     }
 
     #compare(index1: number, index2: number): number {
@@ -76,10 +89,11 @@ export class DAryHeap<T = number> implements Heap<T> {
             let firstChildIndex = DAryHeap.getNthChildIndex(1, this.n, index);
             if (firstChildIndex >= this.array.length) return;
 
-            const childIndexes = Array.from(Array(this.n).keys())
-                .map(n => firstChildIndex + n);
+            const childIndexes = Array.from(Array(this.n).keys()).map(
+                (n) => firstChildIndex + n
+            );
             const smallestChildIndex = childIndexes
-                .filter(x => x < this.array.length)
+                .filter((x) => x < this.array.length)
                 .reduce((a, b) => (this.#compare(a, b) < 0 ? a : b));
             if (this.#compare(index, smallestChildIndex) < 0) return;
 

@@ -29,8 +29,13 @@ export class BinaryHeap<T = number> implements Heap<T> {
      * @param array An array of items to create a binary heap from.
      * @returns a binary heap from the given items in the array.
      */
-    static from<T>(array: Array<T>, comparator?: (a: T, b: T) => number): BinaryHeap<T> {
-        const heap = comparator ? new BinaryHeap<T>(comparator) : new BinaryHeap<T>();
+    static from<T>(
+        array: Array<T>,
+        comparator?: (a: T, b: T) => number
+    ): BinaryHeap<T> {
+        const heap = comparator
+            ? new BinaryHeap<T>(comparator)
+            : new BinaryHeap<T>();
         heap.array = array;
         for (let i = Math.floor(array.length / 2) - 1; i >= 0; i--) {
             heap.siftDown(i);
@@ -51,7 +56,10 @@ export class BinaryHeap<T = number> implements Heap<T> {
      * const wrong = new BinaryHeap<string>();  // Will result in a runtime error
      * const correct2 = new BinaryHeap<string>((a, b) => a.length - b.length);  // This is also fine
      */
-    constructor(comparator: Comparator<T> = ((a: number, b: number) => a - b) as Comparator<T>) {
+    constructor(
+        comparator: Comparator<T> = ((a: number, b: number) =>
+            a - b) as Comparator<T>
+    ) {
         // The type cast in the constructor argument default value above "loses" information.
         // The generic type T can still be explicitly set without a comparator given, resulting in
         // a potentially non-functional comparator. The alternative would be to create a seperate
@@ -74,7 +82,10 @@ export class BinaryHeap<T = number> implements Heap<T> {
 
     #swap(index1: number, index2: number): void {
         // Assumes valid indexes
-        [this.array[index1], this.array[index2]] = [this.array[index2], this.array[index1]];
+        [this.array[index1], this.array[index2]] = [
+            this.array[index2],
+            this.array[index1],
+        ];
     }
 
     #compare(index1: number, index2: number): number {

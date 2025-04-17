@@ -18,7 +18,10 @@ describe("BinaryHeap", () => {
         const dog1 = { name: "woofer" };
         const dog2 = { name: "goof" };
 
-        const heap = BinaryHeap.from<Dog>([dog1, dog2], (a, b) => b.name.length - a.name.length);
+        const heap = BinaryHeap.from<Dog>(
+            [dog1, dog2],
+            (a, b) => b.name.length - a.name.length
+        );
 
         expect(heap.pop()).toBe(dog1);
         expect(heap.pop()).toBe(dog2);
@@ -28,7 +31,10 @@ describe("BinaryHeap", () => {
         "is fast on huge array",
         () => {
             const size = 100_000;
-            const heap = BinaryHeap.from(Array.from(Array(size).keys()), (a, b) => b - a);
+            const heap = BinaryHeap.from(
+                Array.from(Array(size).keys()),
+                (a, b) => b - a
+            );
 
             // This would be 1 billion comparisons in O(n) time complexity. Good enough test
             // to verify O(log n) time complexity
