@@ -53,5 +53,23 @@ export function createHeapTestSuite(createHeap: <T>() => Heap<T>) {
             expect(heap.pop()).toBe(2);
             expect(heap.pop()).toBe(3);
         });
+
+        it("pushing 1000 items worst case scenario", () => {
+            const heap = createHeap();
+            for (let i = 1000; i > 0; i--) {
+                heap.push(i);
+            }
+            expect(heap.peek()).toBe(1);
+        });
+
+        it("pushing, then popping random heaps", () => {
+            for (let i = 0; i < 5; i++) {
+                const array = (new Array(10_000)).map(() => Math.floor(200_000 * Math.random()) - 100_000);
+                const heap = createHeap();
+
+                array.forEach(value => heap.push(value));
+                array.sort().forEach(value => expect(heap.pop()).toBe(value));
+            }
+        })
     });
 }
