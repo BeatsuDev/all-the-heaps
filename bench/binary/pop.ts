@@ -5,8 +5,8 @@ import { Heap as HeapJsHeap } from "heap-js";
 import { BinaryHeap } from "../../dist";
 
 
-group("Pop 1 million", () => {
-    const size = 1_000_000;
+group("Pop 10 million", () => {
+    const size = 10_000_000;
     const array = Array.from(Array(size).keys());
 
     const heapHeap = HeapHeap.heapify(array);
