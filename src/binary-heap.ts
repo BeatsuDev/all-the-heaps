@@ -116,12 +116,17 @@ export class BinaryHeap<T = number> implements Heap<T> {
 
     siftUp(index: number): void {
         // Assumes valid index
+        const value = this.array[index];
+
         let parentIndex = BinaryHeap.getParentIndex(index);
-        while (parentIndex >= 0 && this.#compare(parentIndex, index) > 0) {
-            this.#swap(index, parentIndex);
+        while (parentIndex >= 0 && this.comparator(this.array[parentIndex], value) > 0) {
+            // Move only parent to child
+            this.array[index] = this.array[parentIndex];
             index = parentIndex;
             parentIndex = BinaryHeap.getParentIndex(index);
         }
+
+        this.array[index] = value;
     }
 
     pop(): T | undefined {
