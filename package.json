@@ -25,7 +25,7 @@
   },
   "files": ["./dist/*"],
   "keywords": ["heap", "binary heap", "min heap", "max heap"],
-  "license": "Unlicense",
+  "license": "CC0-1.0",
   "scripts": {
     "build": "rimraf dist && bun build src/index.ts --outdir dist && tsc -p tsconfig.build.json",
     "format": "prettier src tests --write",
