@@ -93,25 +93,26 @@ export class BinaryHeap<T = number> implements Heap<T> {
         return this.comparator(this.array[index1], this.array[index2]);
     }
 
+    // Assumes valid index
     siftDown(index: number): void {
-        // Assumes valid index
-        while (true) {
+        const value = this.array[index];
+
+        // This is the last node with a child/children
+        const end = BinaryHeap.getParentIndex(this.array.length - 1);
+        while (index <= end) {
             let left = BinaryHeap.getLeftChildIndex(index);
             let right = BinaryHeap.getRightChildIndex(index);
+            let childIndex =
+                right >= this.array.length || this.#compare(left, right) < 0
+                    ? left
+                    : right;
 
-            // No children
-            if (left >= this.array.length) return;
-            // One child
-            if (right >= this.array.length) {
-                if (this.#compare(index, left) < 0) return;
-                return this.#swap(index, left);
-            }
-            // Two children
-            const smallestIndex = this.#compare(left, right) < 0 ? left : right;
-            if (this.#compare(index, smallestIndex) < 0) return;
-            this.#swap(index, smallestIndex);
-            index = smallestIndex;
+            if (this.comparator(value, this.array[childIndex]) < 0) break;
+            this.array[index] = this.array[childIndex];
+            index = childIndex;
         }
+
+        this.array[index] = value;
     }
 
     siftUp(index: number): void {
@@ -134,6 +135,7 @@ export class BinaryHeap<T = number> implements Heap<T> {
 
     pop(): T | undefined {
         if (this.array.length === 0) return;
+        if (this.array.length === 1) return this.array.pop();
 
         this.#swap(0, this.array.length - 1);
         const value = this.array.pop();
