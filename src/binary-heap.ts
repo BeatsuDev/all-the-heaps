@@ -119,7 +119,10 @@ export class BinaryHeap<T = number> implements Heap<T> {
         const value = this.array[index];
 
         let parentIndex = BinaryHeap.getParentIndex(index);
-        while (parentIndex >= 0 && this.comparator(this.array[parentIndex], value) > 0) {
+        while (
+            parentIndex >= 0 &&
+            this.comparator(this.array[parentIndex], value) > 0
+        ) {
             // Move only parent to child
             this.array[index] = this.array[parentIndex];
             index = parentIndex;
