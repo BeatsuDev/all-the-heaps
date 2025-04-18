@@ -69,7 +69,7 @@ export class BinaryHeap<T = number> implements Heap<T> {
     }
 
     static getParentIndex(index: number): number {
-        return index - 1 >> 1;
+        return (index - 1) >> 1;
     }
 
     static getLeftChildIndex(index: number): number {
