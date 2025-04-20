@@ -64,6 +64,11 @@ heap.pop() // undefined
 
 ## Performance
 
+Here's a performance comparison over the most popular heap packages and all-the-heaps. `heap` is 
+currently the fastest - *for now* 😉.
+
+![Performance comparison for binary heap](./bench/assets/overall-comparison.png)
+
 Do you want to make your own fast heap implementation? Or perhaps you're just curious what tricks
 have been done to make this implementation fast? Here's what I've learned!
 
