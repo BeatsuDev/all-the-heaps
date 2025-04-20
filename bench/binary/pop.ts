@@ -5,26 +5,29 @@ import { Heap as HeapJsHeap } from "heap-js";
 import { BinaryHeap } from "../../dist";
 
 
-group("Pop 10 million", () => {
-    const size = 10_000_000;
+group("Pop 100 thousand", () => {
+    const size = 100_000;
     const array = Array.from(Array(size).keys());
-
-    const heapHeap = HeapHeap.heapify(array);
-    const heapJsHeap = HeapJsHeap.heapify(array);
-    const binaryHeap = BinaryHeap.from(array);
+    const heapArray = BinaryHeap.from(array).array;
 
     summary(() => {
         compact(() => {
             bench("heap's binary heap", () => {
-                for (let i = 0; i < size; i++) { heapHeap.pop(); }
+                const heap = new HeapHeap();
+                heap.nodes = heapArray.slice();
+                for (let i = 0; i < size; i++) { heap.pop(); }
             }).gc("inner");
 
             bench("heap-js's binary heap", () => {
-                for (let i = 0; i < size; i++) { heapJsHeap.pop(); }
+                const heap = new HeapJsHeap();
+                heap.heapArray = heapArray.slice();
+                for (let i = 0; i < size; i++) { heap.pop(); }
             }).gc("inner");
 
             bench("all-the-heap's binary heap", () => {
-                for (let i = 0; i < size; i++) { binaryHeap.pop(); }
+                const heap = new BinaryHeap();
+                heap.array = heapArray.slice();
+                for (let i = 0; i < size; i++) { heap.pop(); }
             }).gc("inner");
         });
     });
