@@ -4,7 +4,7 @@
   "author": "Eric Bieszczad-Stie <ericbieszczad@gmail.com> (https://ericbs.com)",
   "repository": {
     "type": "git",
-    "url": "git@github.com:BeatsuDev/all-the-heaps.git"
+    "url": "git://github.com:BeatsuDev/all-the-heaps.git"
   },
   "devDependencies": {
     "@mitata/counters": "^0.0.8",
