@@ -11,15 +11,15 @@ group("Heapify 1 million - best case", () => {
     summary(() => {
         compact(() => {
             bench("heap's binary heap", () => {
-                do_not_optimize(HeapHeap.heapify(array));
+                do_not_optimize(HeapHeap.heapify(array.slice()));
             }).gc("inner");
 
             bench("heap-js's binary heap", () => {
-                do_not_optimize(HeapJsHeap.heapify(array));
+                do_not_optimize(HeapJsHeap.heapify(array.slice()));
             }).gc("inner");
 
             bench("all-the-heap's binary heap", () => {
-                do_not_optimize(BinaryHeap.from(array));
+                do_not_optimize(BinaryHeap.from(array.slice()));
             }).gc("inner");
         });
     });
@@ -31,15 +31,15 @@ group("Heapify 1 million - worst case", () => {
     summary(() => {
         compact(() => {
             bench("heap's binary heap", () => {
-                do_not_optimize(HeapHeap.heapify(array));
+                do_not_optimize(HeapHeap.heapify(array.slice()));
             }).gc("inner");
 
             bench("heap-js's binary heap", () => {
-                do_not_optimize(HeapJsHeap.heapify(array));
+                do_not_optimize(HeapJsHeap.heapify(array.slice()));
             }).gc("inner");
 
             bench("all-the-heap's binary heap", () => {
-                do_not_optimize(BinaryHeap.from(array));
+                do_not_optimize(BinaryHeap.from(array.slice()));
             }).gc("inner");
         });
     });
