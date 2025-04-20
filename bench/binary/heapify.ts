@@ -15,11 +15,11 @@ group("Heapify 1 million - best case", () => {
             }).gc("inner");
 
             bench("heap-js's binary heap", () => {
-                do_not_optimize(HeapHeap.heapify(array));
+                do_not_optimize(HeapJsHeap.heapify(array));
             }).gc("inner");
 
             bench("all-the-heap's binary heap", () => {
-                do_not_optimize(HeapHeap.heapify(array));
+                do_not_optimize(BinaryHeap.from(array));
             }).gc("inner");
         });
     });
